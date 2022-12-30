@@ -1,0 +1,18 @@
+@import "var.scss";
+
+.marker {
+    position: relative;
+    background: $red;
+    width: 64px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(-30deg);
+
+    span {
+        color: white;
+        font-size: 12px;
+        transform: skewX(30deg);
+    }
+}

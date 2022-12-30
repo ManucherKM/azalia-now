@@ -1,0 +1,15 @@
+@import "var.scss";
+
+.btn_default {
+    border: none;
+    outline: none;
+    color: white;
+    background: $violet;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    user-select: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

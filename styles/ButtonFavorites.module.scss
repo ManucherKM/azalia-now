@@ -1,0 +1,37 @@
+@import "var.scss";
+
+$start_stroke: #c4c4c4;
+
+.favorites {
+    cursor: pointer;
+
+    &:hover circle {
+        stroke: $start_stroke;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.favorites_active {
+    cursor: pointer;
+
+
+    circle {
+        stroke: $red;
+    }
+
+    path {
+        stroke: $red;
+
+        &:last-child {
+            stroke: none;
+            fill: $red;
+        }
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
