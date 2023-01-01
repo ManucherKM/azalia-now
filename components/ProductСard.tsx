@@ -1,5 +1,5 @@
 //Библиотеки
-import { FC, useState } from "react"
+import { FC, useRef, useState } from "react"
 //Компоненты
 import Image from "next/image"
 import Link from "next/link"
@@ -29,7 +29,7 @@ const ProductСard: FC<IProductСard> = ({
 
     const initialStars = generateStars(grade);
 
-    const [stars, setStars] = useState<boolean[]>(initialStars);
+    const stars = useRef<boolean[]>(initialStars);
 
     function generateStars(grade: number) {
         let res: boolean[] = [];
@@ -90,6 +90,7 @@ const ProductСard: FC<IProductСard> = ({
                         alt="img"
                         width={220}
                         height={158}
+                        priority
                     />
                 </div>
                 <div className={styles.description}>
@@ -107,7 +108,7 @@ const ProductСard: FC<IProductСard> = ({
                                 5 раз и мы к ним больше не притронимся
                             */}
                             <List
-                                arr={stars}
+                                arr={stars.current}
                                 render={(item, indx) =>
                                     <StarGrade
                                         isEmpty={item}

@@ -11,18 +11,13 @@
 
         .wrapper_marker {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
         }
 
         .wrapper_img {
             display: flex;
             justify-content: center;
             align-items: center;
-
-            .img {
-                width: 220px;
-                height: 220px;
-            }
         }
 
         .description {
